@@ -7,16 +7,17 @@
 
 <div class="col-3">
     <img src="{{pet.photo_url}}">
-    <p>{{pet.name}} 
+    <p>{{pet.name}}
         {%if pet.available%} <b>is available!</b>
-        {%else%} 
-            <b>is not available</b>
+        {%else%}
+        <b>is not available</b>
         {%endif%}
+        <a href="/{{ pet.id }}" class="btn btn-primary">Details</a>
     </p>
 
 </div>
 
 {% endfor %}
-<a class ="btn btn-success" href = "/add" >Add Pet</a>
+<a class="btn btn-success" href="/add">Add Pet</a>
 
 {% endblock %}
