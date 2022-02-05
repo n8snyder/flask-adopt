@@ -11,7 +11,7 @@ class AddPetForm(FlaskForm):
 
     name = StringField("Name", validators=[InputRequired()])
     species = StringField(
-        "Species",
+        "Species", # change to selectfield
         validators=[
             InputRequired(),
             AnyOf(["cat", "dog", "porcupine"], "Invalid species"),
@@ -43,4 +43,4 @@ class EditPetForm(FlaskForm):
         "Photo URL", validators=[Optional(), URL(message="Not a url")]
     )
     notes = TextAreaField("Notes")
-    available = BooleanField("Available")
+    available = BooleanField("Available", validators=[AnyOf([True, False])])

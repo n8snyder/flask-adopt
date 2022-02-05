@@ -24,7 +24,7 @@ toolbar = DebugToolbarExtension(app)
 
 
 @app.get("/")
-def homepage():
+def show_homepage():
     """Homepage which lists pets"""
 
     pets = Pet.query.all()
@@ -57,7 +57,7 @@ def add_pet():
 
 
 @app.route("/<int:pet_id>", methods=["GET", "POST"])
-def pet_edit_details(pet_id):
+def edit_show_pet_details(pet_id):
     """Shows details of a pet and form for editing"""
 
     pet = Pet.query.get_or_404(pet_id)

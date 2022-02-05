@@ -1,4 +1,4 @@
-"""Seed file to make sample data for Users db."""
+"""Seed file to make sample data for Pets db."""
 
 from models import Pet, db
 from app import app
@@ -10,7 +10,7 @@ db.create_all()
 # If table isn't empty, empty it
 Pet.query.delete()
 
-# Add Users
+# Add Pets
 whiskey = Pet(name='Whiskey', 
                 species="dog", 
                 photo_url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi-tSMJdDZLMq1-bjfgHHN1KKh7XY5ubMjYQ_YsPK30Fx0ONJzs-fO78_iUKIJfpnMl3U&usqp=CAU", 
